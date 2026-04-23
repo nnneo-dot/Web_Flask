@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "phone": "0912345678",
+      "birthdate": "1990-01-01"
+    },
+    {
+      "username": "nnneo-dot",
+      "email": "neo19881202@gmail.com",
+      "password": "sunshine",
+      "phone": "0918686676",
+      "birthdate": "1988-12-02"
+    }
+  ]
+}
