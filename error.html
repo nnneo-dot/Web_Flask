@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}錯誤 - 會員系統{% endblock %}
+
+{% block content %}
+<article>
+  <hgroup>
+    <h2>⚠️ 發生錯誤</h2>
+    <p>操作無法完成，請參考以下錯誤訊息。</p>
+  </hgroup>
+
+  <blockquote>{{ message }}</blockquote>
+
+  <div>
+    <a href="javascript:history.back()" role="button" class="secondary">返回前一頁</a>
+    &nbsp;
+    <a href="{{ url_for('index') }}" role="button" class="outline">返回首頁</a>
+  </div>
+</article>
+{% endblock %}

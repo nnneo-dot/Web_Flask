@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}歡迎 {{ user.username }} - 會員系統{% endblock %}
+
+{% block content %}
+<article>
+  <hgroup>
+    <h2>🎉 歡迎回來，{{ user.username }}！</h2>
+    <p>以下是您的會員資料</p>
+  </hgroup>
+
+  <table>
+    <tbody>
+      <tr>
+        <th scope="row">帳號</th>
+        <td>{{ user.username }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+        <th scope="row">電話</th>
+        <td>{{ user.phone | mask_phone if user.phone else '（未填寫）' }}</td>
+      </tr>
+      <tr>
+        <th scope="row">出生日期</th>
+        <td>{{ user.birthdate | format_tw_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <a href="{{ url_for('users_list_route') }}" role="button">查看會員清單</a>
+    &nbsp;
+    <a href="{{ url_for('index') }}" role="button" class="secondary outline">返回首頁</a>
+  </div>
+</article>
+{% endblock %}

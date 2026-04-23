@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}註冊 - 會員系統{% endblock %}
+
+{% block content %}
+<article>
+  <h2>📝 會員註冊</h2>
+  <form method="POST" action="{{ url_for('register_route') }}">
+    <label for="username">
+      帳號 <span aria-hidden="true">*</span>
+      <input type="text" id="username" name="username" placeholder="請輸入帳號" required>
+    </label>
+
+    <label for="email">
+      Email <span aria-hidden="true">*</span>
+      <input type="email" id="email" name="email" placeholder="請輸入 Email" required>
+    </label>
+
+    <label for="password">
+      密碼 <span aria-hidden="true">*</span>（6～16 字元）
+      <input type="password" id="password" name="password" placeholder="請輸入密碼" required minlength="6" maxlength="16">
+    </label>
+
+    <label for="phone">
+      電話（選填，10 碼數字，開頭 09）
+      <input type="tel" id="phone" name="phone" placeholder="例：0912345678">
+    </label>
+
+    <label for="birthdate">
+      出生日期 <span aria-hidden="true">*</span>
+      <input type="date" id="birthdate" name="birthdate" required>
+    </label>
+
+    <button type="submit">確認註冊</button>
+    <a href="{{ url_for('login_route') }}" role="button" class="secondary outline">已有帳號？前往登入</a>
+  </form>
+</article>
+{% endblock %}

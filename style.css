@@ -1,0 +1,29 @@
+/* 簡易會員系統 - 自訂樣式 */
+
+/* 讓 article 有卡片感 */
+article {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+/* 讓首頁按鈕組有間距 */
+article > div {
+  margin-top: 1.5rem;
+}
+
+/* 表格 th 靠右對齊（for 會員資料頁） */
+table th[scope="row"] {
+  width: 100px;
+  color: var(--pico-muted-color);
+  font-weight: 600;
+}
+
+/* blockquote 在錯誤頁做警示樣式 */
+blockquote {
+  border-left: 4px solid var(--pico-color-red-500, #e74c3c);
+  color: var(--pico-color-red-700, #c0392b);
+  background: var(--pico-color-red-50, #fdf2f2);
+  padding: 1rem 1.5rem;
+  border-radius: var(--pico-border-radius);
+}
